@@ -23,7 +23,6 @@ rate_buttons.forEach((button) => {
 })  
 
 submit_button.addEventListener('click', (event) => {
-    event.target.setAttribute('aria-pressed', true);
     thanks_state.style.display= 'flex';
     rating_state.style.display= 'none';
 })
