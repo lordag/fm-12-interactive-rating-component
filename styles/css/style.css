@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+.rating__state, .thanks__state {
+  background-color: hsl(216, 19%, 15%);
+  color: hsl(0, 0%, 100%);
+  max-width: 100%;
+  min-height: 28rem;
+  padding: 2rem 1.2rem;
+  border-radius: 2rem;
+}
+@media screen and (min-width: 500px) {
+  .rating__state, .thanks__state {
+    width: 25rem;
+  }
+}
+
+.rating__state header div, .rating__state__buttons button {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 50%;
+  color: hsl(217, 12%, 63%);
+  border: none;
+  font-weight: 700;
+}
+@media screen and (max-width: 395px) {
+  .rating__state header div, .rating__state__buttons button {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+.rating__state__buttons button, .rating__state__button {
+  cursor: pointer;
+  transition: background-color 0.8s, color 0.8s;
+}
+.rating__state__buttons button:hover, .rating__state__button:hover {
+  color: hsl(213, 19%, 18%);
+  background-color: hsl(0, 0%, 100%);
+}
+@media screen and (min-width: 768px) {
+  .rating__state__buttons button:active, .rating__state__button:active {
+    background-color: hsl(25, 97%, 53%);
+  }
+}
+
+.rating__state p, .thanks__state p {
+  color: hsl(217, 12%, 63%);
+  line-height: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+body {
+  font-family: "Overpass", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background-color: hsl(216, 12%, 8%);
+  height: 100vh;
+  padding: 0rem 2rem;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+.rating__state {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: unset;
+  gap: 2rem;
+  padding: 2rem;
+}
+.rating__state header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: unset;
+  gap: 2rem;
+}
+.rating__state header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.rating__state header h1 {
+  font-weight: 400;
+}
+.rating__state__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: unset;
+  gap: 0;
+}
+.rating__state__buttons button.active {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+.rating__state__button {
+  width: 100%;
+  border: none;
+  line-height: 3rem;
+  border-radius: 1.5rem;
+  background-color: hsl(25, 97%, 53%);
+  font-weight: 700;
+  color: hsl(213, 19%, 18%);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.rating__state__button:disabled {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(213, 19%, 18%);
+}
+
+.thanks__state {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  gap: 1rem;
+  display: none;
+  min-height: 420px;
+}
+.thanks__state header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding-top: 0.5rem;
+}
+.thanks__state header img {
+  width: 11rem;
+}
+.thanks__state header p {
+  display: block;
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(213, 19%, 18%);
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.thanks__state p {
+  text-align: center;
+  padding: 0rem 1.2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,48 @@
+@use "variables" as *;
+
+%default_section{
+    background-color: $medium-dark-blue;
+    color: $white;
+    max-width: 100%;
+    min-height: 28rem;
+    padding: 2rem 1.2rem;
+    border-radius: 2rem;
+    @media screen and (min-width: 500px) {
+        width: 25rem;
+    }
+}
+
+%rounded{
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: $dark-blue;
+    border-radius: 50%;
+    color: $light-grey;
+    border: none;
+    font-weight: $max-weight;
+
+    @media screen and (max-width: 395px) {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}
+
+%buttons{
+    cursor: pointer;
+    transition: background-color 0.8s, color 0.8s;
+
+    &:hover{
+        color: $dark-blue;
+        background-color: $white;    
+    }
+    @media screen and (min-width: 768px) {
+        &:active{
+            background-color: $orange;
+        }   
+    }
+}
+
+%paragraph{
+    color: $light-grey;
+    line-height: 1.5rem;
+}

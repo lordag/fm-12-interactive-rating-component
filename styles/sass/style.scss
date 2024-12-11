@@ -1,0 +1,99 @@
+@use "variables" as *;
+@use "mixins" as mix;
+@use "utils" as utils;
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+body{
+    font-family: "Overpass", serif;
+    @include mix.flex-elem($flex-direction: column, $justify-content:center, $align-items: center);
+    background-color: $very-dark-blue;
+    height: 100vh;
+    padding: 0rem 2rem;
+}
+
+p{
+    font-size: 0.9rem;
+}
+
+.rating__state{    
+    @extend %default_section;
+    @include mix.flex-elem($flex-direction: column, $justify-content:flex-start, $gap: 2rem);
+    padding: 2rem;
+    header{
+        @include mix.flex-elem($flex-direction: column, $justify-content:flex-start, $gap: 2rem);        
+        div{
+            @include mix.flex-elem($flex-direction: column, $justify-content:center,$align-items:center);
+            @extend %rounded;
+        }
+        h1{
+            font-weight: $min-weight;
+        }
+    }
+    p{
+      @extend %paragraph;  
+    }
+    &__buttons{
+        @include mix.flex-elem( $justify-content: space-between);
+        button{
+            @extend %rounded;
+            @extend %buttons;            
+
+            &.active{
+                background-color: $orange;
+                color: $white;
+            }
+        }        
+    }
+    &__button{
+        width: 100%;
+        border: none;
+        line-height: 3rem;
+        border-radius: 1.5rem;
+        background-color: $orange;
+        font-weight: $max-weight;
+        color: $dark-blue;
+        font-size: 0.9rem;
+        cursor: pointer;
+        @extend %buttons;
+
+        &:disabled{
+            background-color: $light-grey;
+            color: $dark-blue;
+        }
+    }
+}
+
+.thanks__state{
+    @include mix.flex-elem($flex-direction: column, $gap: 1rem);
+    @extend %default_section;
+    display: none;
+    min-height: 420px;
+    header{
+        @include mix.flex-elem($flex-direction: column, $justify-content:center, $align-items:center);
+        padding-top: 0.5rem;
+        img{
+            width: 11rem;
+        }
+        p{            
+            display: block;
+            color: $orange;
+            background-color: $dark-blue;
+            padding: 0.5rem 1.5rem;
+            border-radius: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;         
+        }
+    }
+    p{
+        @extend %paragraph;  
+        text-align: center;
+        padding: 0rem 1.2rem;
+    }
+}
