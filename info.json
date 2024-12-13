@@ -1,0 +1,8 @@
+{
+    "preview": "demo.png",
+    "tag": ['Html', 'Css', 'Javascript'],
+    "title": "Interactive rating component",
+    "description": "Interactive rating component challenge from Frontend Mentor",
+    "github": "https://github.com/lordag/fm-12-interactive-rating-component",
+    "live": "https://lordag.github.io/fm-12-interactive-rating-component/"
+}
